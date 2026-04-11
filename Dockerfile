@@ -7,4 +7,5 @@ RUN apt-get update && apt-get install -y \
     apt update && apt install -y jotta-cli
 ENV DATA_DIR=/data
 VOLUME /data
+ADD /start.sh /
 CMD ["/start.sh"]
