@@ -1,7 +1,8 @@
 #!/bin/bash
 
-if [ ! -f ~/.bashrc ]; then
-    cat > ~/.bashrc <<'EOF'
+if ! grep -q 'jotta-cli completion' ~/.bashrc 2>/dev/null; then
+    cat >> ~/.bashrc <<'EOF'
+
 # Source bash completion
 if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
